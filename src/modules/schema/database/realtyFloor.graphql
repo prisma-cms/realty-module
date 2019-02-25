@@ -1,0 +1,12 @@
+
+type RealtyFloor {
+  id: ID! @unique
+  name: Int!
+
+  """Where floor located"""
+  Object: RealtyObject @relation(name: "RealtyObjectFloors")
+
+  """Objects on floor"""
+  Objects: [RealtyObject!]! @relation(name: "RealtyFloorObjects")
+  CreatedBy: User
+}

@@ -1,3 +1,8 @@
+1.2.0
+===============================
+- Added base schema
+- Added RealtyArea module
+
 1.1.5
 ===============================
 - Upgraded nodemon

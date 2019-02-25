@@ -5,6 +5,8 @@ import chalk from "chalk";
 
 import PrismaModule from "@prisma-cms/prisma-module";
 
+import UserModule from "@prisma-cms/user-module";
+
 import MergeSchema from 'merge-graphql-schemas';
 
 import path from 'path';
@@ -18,6 +20,8 @@ const { createWriteStream, unlinkSync } = fs;
 const { fileLoader, mergeTypes } = MergeSchema
 
 
+import RealtyAreaModule from "./realtyArea";
+
 
 class Module extends PrismaModule {
 
@@ -28,6 +32,12 @@ class Module extends PrismaModule {
 
     Object.assign(this, {
     });
+
+    this.mergeModules([
+      UserModule,
+
+      RealtyAreaModule,
+    ]);
 
   }
 

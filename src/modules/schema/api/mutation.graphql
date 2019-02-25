@@ -1,0 +1,13 @@
+
+type Mutation {
+
+  createRealtyAreaProcessor(
+    data: RealtyAreaCreateInput!
+  ): RealtyAreaResponse!
+
+  updateRealtyAreaProcessor(
+    data: RealtyAreaUpdateInput!
+    where: RealtyAreaWhereUniqueInput!
+  ): RealtyAreaResponse!
+
+}

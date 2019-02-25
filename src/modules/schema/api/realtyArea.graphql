@@ -1,0 +1,7 @@
+
+type RealtyAreaResponse{
+  success: Boolean!
+  message: String
+  errors: [Error!]!
+  data: RealtyArea
+}

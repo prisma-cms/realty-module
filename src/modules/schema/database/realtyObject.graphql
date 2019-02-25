@@ -1,0 +1,41 @@
+
+enum RealtyObjectType {
+  """Кондоминиум"""
+  Condominium
+
+  """Частный дом"""
+  House
+
+  """Многоквартирный дом"""
+  AparmentsHouse
+
+  """Квартира"""
+  Aparment
+
+  """Офис"""
+  Office
+
+  """Комната"""
+  Room
+
+  """Дача"""
+  Dacha
+}
+
+type RealtyObject {
+  id: ID! @unique
+  name: String!
+  code: ID @unique
+  type: RealtyObjectType
+
+  """Where Object located"""
+  Floor: RealtyFloor @relation(name: "RealtyFloorObjects")
+
+  """Floors in Object"""
+  Floors: [RealtyFloor!]! @relation(name: "RealtyObjectFloors")
+
+  Parent: RealtyObject @relation(name: "RealtyObjectParent")
+  Children: [RealtyObject!]! @relation(name: "RealtyObjectParent")
+  Area: RealtyArea
+  CreatedBy: User
+}

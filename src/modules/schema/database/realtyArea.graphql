@@ -1,0 +1,23 @@
+
+enum RealtyAreaType {
+  """Земельный участок"""
+  LandPlot
+
+  """Леса и многолетние насаждения"""
+  Perennials
+
+  """Недры"""
+  Nedra
+
+  """Водный объект"""
+  WaterObject
+}
+
+type RealtyArea {
+  id: ID! @unique
+  name: String!
+  code: ID @unique
+  type: RealtyAreaType
+  Objects: [RealtyObject!]!
+  CreatedBy: User
+}
