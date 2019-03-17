@@ -1,3 +1,8 @@
+1.3.0
+===============================
+- Added RealtyObject module
+- Added RealtyModule module
+
 1.2.0
 ===============================
 - Added base schema

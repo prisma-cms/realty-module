@@ -10,4 +10,22 @@ type Mutation {
     where: RealtyAreaWhereUniqueInput!
   ): RealtyAreaResponse!
 
+  createRealtyObjectProcessor(
+    data: RealtyObjectCreateInput!
+  ): RealtyObjectResponse!
+
+  updateRealtyObjectProcessor(
+    data: RealtyObjectUpdateInput!
+    where: RealtyObjectWhereUniqueInput!
+  ): RealtyObjectResponse!
+
+  createRealtyFloorProcessor(
+    data: RealtyFloorCreateInput!
+  ): RealtyFloorResponse!
+
+  updateRealtyFloorProcessor(
+    data: RealtyFloorUpdateInput!
+    where: RealtyFloorWhereUniqueInput!
+  ): RealtyFloorResponse!
+
 }

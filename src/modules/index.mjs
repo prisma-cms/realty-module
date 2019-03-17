@@ -21,6 +21,8 @@ const { fileLoader, mergeTypes } = MergeSchema
 
 
 import RealtyAreaModule from "./realtyArea";
+import RealtyObjectModule from "./realtyObject";
+import RealtyFloorModule from "./realtyFloor";
 
 
 class Module extends PrismaModule {
@@ -37,6 +39,8 @@ class Module extends PrismaModule {
       UserModule,
 
       RealtyAreaModule,
+      RealtyObjectModule,
+      RealtyFloorModule,
     ]);
 
   }

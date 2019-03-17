@@ -1,0 +1,7 @@
+
+type RealtyObjectResponse{
+  success: Boolean!
+  message: String
+  errors: [Error!]!
+  data: RealtyObject
+}
