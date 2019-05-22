@@ -5,7 +5,7 @@ import PrismaModule from "@prisma-cms/prisma-module";
 
 import chalk from "chalk";
 
-class RealtyAreaProcessor extends PrismaProcessor {
+export class RealtyAreaProcessor extends PrismaProcessor {
 
 
   constructor(props) {
@@ -51,7 +51,7 @@ class RealtyAreaProcessor extends PrismaProcessor {
   }
 
 
-  async mutate(objectType, args, into) {
+  async mutate(objectType, args, info) {
 
     return super.mutate(objectType, args);
   }
@@ -61,7 +61,7 @@ class RealtyAreaProcessor extends PrismaProcessor {
 
 
 
-class Module extends PrismaModule {
+export class Module extends PrismaModule {
 
 
   constructor(props = {}) {
